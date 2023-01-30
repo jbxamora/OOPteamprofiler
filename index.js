@@ -24,6 +24,20 @@ function createTeam () {
             case "Intern":
                 addIntern();
                 break;
+            case "cancel":
+                return;
         }
     })
+}
+
+function addManager() {
+
+}
+
+function addEngineer() {
+
+}
+
+function addIntern() {
+
 }
