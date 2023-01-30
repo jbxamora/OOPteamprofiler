@@ -1,4 +1,4 @@
-import Engineer from "../staff/Engineer.js";
+const Engineer = require("../staff/Engineer.js");
 
 test("Can create Engineer, Verify Github and Role", () => {
   const testGithub = "NoTaReAlGiThuB";

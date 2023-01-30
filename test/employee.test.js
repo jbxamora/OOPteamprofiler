@@ -1,4 +1,4 @@
-import Employee from "../staff/Employee.js";
+const Employee = require("../staff/Employee");
 
 const testName = "John Doe";
 const testID = 2;
@@ -12,27 +12,27 @@ describe("Employee", () => {
   });
 
   it("Can create a new employee", () => {
-    expect(typeof employeeInstance).toBe("object");
+    expect(typeof employeeInstance).toEqual("object");
   });
   it("Has correct name", () => {
-    expect(typeof employeeInstance.name).toBe(testName);
+    expect(employeeInstance.name).toEqual(testName);
   });
   it("Has correct ID", () => {
-    expect(typeof employeeInstance.id).toBe(testID);
+    expect(employeeInstance.id).toEqual(testID);
   });
   it("Has correct Email", () => {
-    expect(typeof employeeInstance.email).toBe(testEmail);
+    expect(employeeInstance.email).toEqual(testEmail);
   });
   it("Gets name through getName method", () => {
-    expect(typeof employeeInstance.getName()).toBe(testName);
+    expect(employeeInstance.getName()).toEqual(testName);
   });
   it("Gets ID through getID method", () => {
-    expect(typeof employeeInstance.getId()).toBe(testID);
+    expect(employeeInstance.getId()).toEqual(testID);
   });
   it("Gets Email through getEmail method", () => {
-    expect(typeof employeeInstance.getEmail()).toBe(testEmail);
+    expect(employeeInstance.getEmail()).toEqual(testEmail);
   });
   it("Has correct role", () => {
-    expect(typeof employeeInstance.getRole()).toBe(returnValue);
+    expect(employeeInstance.getRole()).toEqual(returnValue);
   });
 });
