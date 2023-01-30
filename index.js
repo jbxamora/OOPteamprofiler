@@ -28,6 +28,7 @@ function createTeam () {
                 return;
         }
     })
+    AddAnother();
 }
 
 function addManager() {
@@ -118,4 +119,21 @@ function addIntern() {
         Team.push(intern);
         createTeam();
     })
+}
+
+function AddAnother() {
+    inquirer.prompt{[
+        {
+            type: "list",
+            name: "addAnother",
+            message: "Would you like to add another team member?",
+            choices: ["Yes", "No"],
+        },
+    ]}.then(function (answer) {
+        if (answer.AddAnother === "Yes") {
+            createTeam();
+        } else {
+            console.log("Creating Team...");
+        }
+    });
 }
