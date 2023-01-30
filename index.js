@@ -7,14 +7,14 @@ const fs = require("fs");
 
 const Team = [];
 
-function createTeam () {
+function createTeam() {
     inquirer.prompt([{
         type: "list",
         message: "What type of employee are you adding to the team?"
         name: "addEmployeePrompt",
         choices: ["Manager", "Engineer", "Intern", "Cancel"]
     }]).then(function (userInput) {
-        switch(userInput.addEmployeePrompt) {
+        switch (userInput.addEmployeePrompt) {
             case "Manager":
                 addManager();
                 break;
@@ -32,7 +32,7 @@ function createTeam () {
 }
 
 function addManager() {
-    inquirer.prompt ([
+    inquirer.prompt([
         {
             type: "input",
             name: "managerName",
@@ -53,7 +53,7 @@ function addManager() {
             name: "managerOfficeNumber",
             message: "What is the manager's office number"
         }
-        
+
     ]).then(answers => {
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
         Team.push(manager);
@@ -62,7 +62,7 @@ function addManager() {
 }
 
 function addEngineer() {
-    inquirer.prompt ([
+    inquirer.prompt([
         {
             type: "input",
             name: "engineerName",
@@ -80,19 +80,19 @@ function addEngineer() {
         },
         {
             type: "input",
-            name: "engineerGit",
+            name: "engineerGithub",
             message: "What is the engineer's GitHub UserName?"
         }
-        
+
     ]).then(answers => {
-        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGit);
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         Team.push(engineer);
         createTeam();
     })
 }
 
 function addIntern() {
-    inquirer.prompt ([
+    inquirer.prompt([
         {
             type: "input",
             name: "internName",
@@ -113,7 +113,7 @@ function addIntern() {
             name: "internSchool",
             message: "What school did the intern attend?"
         }
-        
+
     ]).then(answers => {
         const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
         Team.push(intern);
@@ -122,14 +122,16 @@ function addIntern() {
 }
 
 function AddAnother() {
-    inquirer.prompt{[
-        {
-            type: "list",
-            name: "addAnother",
-            message: "Would you like to add another team member?",
-            choices: ["Yes", "No"],
-        },
-    ]}.then(function (answer) {
+    inquirer.prompt{
+        [
+            {
+                type: "list",
+                name: "addAnother",
+                message: "Would you like to add another team member?",
+                choices: ["Yes", "No"],
+            },
+        ]
+    }.then(function (answer) {
         if (answer.AddAnother === "Yes") {
             createTeam();
         } else {
