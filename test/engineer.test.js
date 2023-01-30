@@ -1,4 +1,4 @@
-import Engineer from "./staff/Engineer.js";
+import Engineer from "../staff/Engineer.js";
 
 test("Can create Engineer, Verify Github and Role", () => {
   const testGithub = "NoTaReAlGiThuB";

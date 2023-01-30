@@ -1,4 +1,4 @@
-import Intern from "./staff/Inter.js";
+import Intern from "../staff/Inter.js";
 
 test("Can create Intern, Verify School and Role", () => {
     const testSchool = "UC STAYATHOME";

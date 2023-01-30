@@ -1,4 +1,4 @@
-import Employee from "./staff/Employee.js";
+import Employee from "../staff/Employee.js";
 
 const testName = "John Doe";
 const testID = 2;
