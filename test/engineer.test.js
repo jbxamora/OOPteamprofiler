@@ -1,6 +1,6 @@
-import Engineer from "./assets/staff/Engineer.js";
+import Engineer from "./staff/Engineer.js";
 
-test("Can create Engineer and verify Github and role", () => {
+test("Can create Engineer, Verify Github and Role", () => {
   const testGithub = "NoTaReAlGiThuB";
   const expectedRole = "Engineer";
   const employeeInstance = new Engineer(

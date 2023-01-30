@@ -1,8 +1,8 @@
-import Employee from "./assets/staff/Employee.js";
+import Employee from "./staff/Employee.js";
 
 const testName = "John Doe";
 const testID = 2;
-const testEmail = "johndoe@fakedomain.not";
+const testEmail = "fakemail@fakedomain.not";
 const returnValue = "Employee";
 
 describe("Employee", () => {
