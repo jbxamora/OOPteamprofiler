@@ -1,7 +1,7 @@
-// create the team
+// Create the team
 const generateTeam = team => {
 
-  // create the manager html
+  // Create the manager html
   const generateManager = manager => {
     return `
 <div class="card employee-card">
@@ -20,7 +20,7 @@ const generateTeam = team => {
         `;
   };
 
-  // create the html for engineers
+  // Create the html for engineers
   const generateEngineer = engineer => {
     return `
 <div class="card employee-card">
@@ -39,7 +39,7 @@ const generateTeam = team => {
         `;
   };
 
-  // create the html for interns
+  // Create the html for interns
   const generateIntern = intern => {
     return `
 <div class="card employee-card">
@@ -79,7 +79,7 @@ const generateTeam = team => {
 
 }
 
-// export function to generate entire page
+// Export function to generate entire page
 module.exports = team => {
 
   return `

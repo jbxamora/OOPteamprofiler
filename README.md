@@ -31,27 +31,27 @@ THEN I exit the application, and the HTML is generated
 ```
 ## Installation
 
-To generate your own README, `git clone` the repo down to your local so you have the Node project on your local.
+To generate your own team, `git clone` the repo down to your local so you have the Node project on your local.
 
 Run `npm install` in order to install the following npm package dependencies as specified in the `package.json`:
 
   * [`inquirer`](https://www.npmjs.com/package/inquirer) will prompt you for your inputs from the command line.
-  * [`axios`](https://www.npmjs.com/package/axios) will fetch your info from the GitHub API.
+  * [`jest`](https://www.npmjs.com/package/jest) will help you run tests with ease.
 
 The application will start by running `node index.js` in the command line.
 
-Answer the prompts in your command line to generate the README.
+Answer the prompts in your command line to build your team.
 
-After answering all the prompts, your README file will be named 'ExampleREADME.md' and will be ready for you at the root of the repo.
+After answering all the prompts, your 'team.html' file will be ready for you to load.
 
-The README has some automatically generated badges for your repo courtesy of shields.io and will include your profile picture & email from GitHub.
-
-
-https://user-images.githubusercontent.com/113067058/213907788-f93f3e98-5661-40cc-b35f-b65724956cc2.mov
+The HTML file will yours to keep and deploy how you see fit.
 
 
+![PICTURE OF GENERATED HTML FILE](./assets/images/generatedhtml.png)
 
-![THIS APP ISNT DEPLOYED ON GITPAGES](./)
+## Video Walkthrough
+
+vid here
 
 ## Code Snippets
 
