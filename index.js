@@ -7,7 +7,7 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 // Paths
-const OUTPUT = path.resolve(__dirname, "output");
+const OUTPUT = path.resolve(__dirname, "dist");
 const outputPath = path.join(OUTPUT, "team.html");
 const generateTeam = require("./src/template");
 
