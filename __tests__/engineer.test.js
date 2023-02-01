@@ -1,4 +1,4 @@
-const Engineer = require("../staff/Engineer");
+const Engineer = require("../lib/Engineer");
 
 test("Can create Engineer, Verify Github and Role", () => {
   const testGithub = "NoTaReAlGiThuB";

@@ -1,4 +1,4 @@
-const Manager = require("../staff/Manager");
+const Manager = require("../lib/Manager");
 
 test("Can create Office Number, Get it and Check Role", () => {
     const testOfiiceNumber = 3;

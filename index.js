@@ -1,7 +1,7 @@
 // Class
-const Manager = require("./staff/Manager");
-const Engineer = require("./staff/Engineer");
-const Intern = require("./staff/Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 // Dependencies
 const inquirer = require("inquirer");
 const path = require("path");
@@ -9,8 +9,8 @@ const fs = require("fs");
 // Paths
 const OUTPUT = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT, "team.html");
-const generateTeam = require("./outpath/template");
-new Manager()
+const generateTeam = require("./src/template");
+
 // Create an empty array to hold team data
 const team = [];
 

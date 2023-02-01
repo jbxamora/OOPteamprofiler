@@ -1,27 +1,16 @@
 # OOPteamprofiler
-Your challenge is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
-Object-Oriented Programming Challenge: Team Profile Generator
-Your challenge is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
+This script is a command-line interface (CLI) tool that generates an HTML page displaying a software development team's information. It uses inquirer to prompt users to add employees to the team, with the type of employee (Manager, Engineer, or Intern) selected by the user. The employee data entered is then used to create objects of Manager, Engineer, or Intern classes (which are required from separate files), and these objects are added to an array 'team'. Once the user is done adding employees, the 'buildHTML' function is called to generate the HTML file by writing the output of the 'generateTeam' function to the file system. The 'generateTeam' function uses the 'team' array data to create the HTML output.
 
-Because this Challenge will require the use of the Inquirer package, ensure that you install and use Inquirer version 8.2.4. To do so, use the following command in your project folder: npm i inquirer@8.2.4.
+## User Story
 
-Testing is key to making code maintainable, you’ll also write unit tests for each part of your code and ensure that it passes all of them.
-
-This application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality and all of the tests passing. You’ll need to submit a link to the video and add it to the README of your project.
-
-Refer to the Video Submission Guide Links to an external site.on the Full-Stack Blog for additional guidance on creating a video.
-
-NOTE
-There is no starter code for this assignment.
-
-IMPORTANT
-In order to install inquirer, please use npm i inquirer@8.2.4.
-
-User Story
+```md
 AS A manager
 I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
-Acceptance Criteria
+```
+
+## Acceptance Criteria
+```md
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for my team members and their information
 THEN an HTML file is generated that displays a nicely formatted team roster based on user input
@@ -39,138 +28,82 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
-Mock-Up
-The following image shows the generated HTML’s appearance and functionality. The styling in the image is just an example, so feel free to add your own styles:
+```
+## Installation
 
-HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.
+To generate your own README, `git clone` the repo down to your local so you have the Node project on your local.
 
-Getting Started
-This Challenge will combine many of the skills you’ve learned over the first ten weeks of this course. To help you get started, we’ve provided some guidelines in addition to the User Story and Acceptance Criteria.
+Run `npm install` in order to install the following npm package dependencies as specified in the `package.json`:
 
-Your application should use Jest Links to an external site.for running the unit tests and Inquirer Links to an external site.for collecting input from the user. The application will be invoked by using the following command:
+  * [`inquirer`](https://www.npmjs.com/package/inquirer) will prompt you for your inputs from the command line.
+  * [`axios`](https://www.npmjs.com/package/axios) will fetch your info from the GitHub API.
 
-node index.js
-It is recommended that you start with a directory structure that looks like this:
+The application will start by running `node index.js` in the command line.
 
-.
-├── __tests__/             //jest tests
-│   ├── Employee.test.js
-│   ├── Engineer.test.js
-│   ├── Intern.test.js
-│   └── Manager.test.js
-├── dist/                  // rendered output (HTML) and CSS style sheet      
-├── lib/                   // classes
-├── src/                   // template helper code 
-├── .gitignore             // indicates which folders and files Git should ignore
-├── index.js               // runs the application
-└── package.json           
-IMPORTANT
-Make sure that you remove dist from the .gitignore file so that Git will track this folder and include it when you push up to your application's repository.
+Answer the prompts in your command line to generate the README.
 
-The application must have these classes: Employee, Manager, Engineer, and Intern. The tests for these classes (in the _tests_ directory) must all pass.
+After answering all the prompts, your README file will be named 'ExampleREADME.md' and will be ready for you at the root of the repo.
 
-The first class is an Employee parent class with the following properties and methods:
+The README has some automatically generated badges for your repo courtesy of shields.io and will include your profile picture & email from GitHub.
 
-name
 
-id
+https://user-images.githubusercontent.com/113067058/213907788-f93f3e98-5661-40cc-b35f-b65724956cc2.mov
 
-email
 
-getName()
 
-getId()
+![THIS APP ISNT DEPLOYED ON GITPAGES](./)
 
-getEmail()
+## Code Snippets
 
-getRole() // Returns 'Employee'
+### How To Write a File Using fs Module
 
-The other three classes will extend Employee.
+```js
+const fs = require('fs');
+```
 
-In addition to Employee's properties and methods, Manager will also have:
+```js
 
-officeNumber
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.log(err) : console.log("README.md was Created!")
+    );
+}
 
-getRole() // Overridden to return 'Manager'
+```
 
-In addition to Employee's properties and methods, Engineer will also have:
+## License
 
-github // GitHub username
+MIT License
 
-getGithub()
+Copyright (c) [2022] [Jorge Zamora]
 
-getRole() // Overridden to return 'Engineer'
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-In addition to Employee's properties and methods, Intern will also have:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-school
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-getSchool()
+## Badges
 
-getRole() // Overridden to return 'Intern'
+<a href=”https://www.linkedin.com/in/jorge-zamora-786945250/”>
+<img src='https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=blue'>
 
-Finally, although it’s not a requirement, you should consider adding validation to ensure that user input provided is in the proper expected format.
+![badmath](https://img.shields.io/github/followers/jbxamora?label=JBXAMORA&logoColor=%23fd2423&style=social)
 
-Grading Requirements
-NOTE
-If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+## Contributing
 
-A repository that has no code
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. If the issue goes unresolved for more than a week feel free to contact me at any of the links listed below. Be sure to add me on LinkedIn and Follow me on GitHub to view my course progression. You can also visit the deployed site and sent a messafe through the contact form.
 
-A repository that includes a unique name but nothing else
-
-A repository that includes only a README file but nothing else
-
-A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-Deliverables: 15%
-A sample HTML file generated using the application must be submitted.
-
-Your GitHub repository containing your application code.
-
-Walkthrough Video: 32%
-A walkthrough video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your README file.
-
-The walkthrough video must show all four tests passing from the command line.
-
-The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-The walkthrough video must demonstrate a generated HTML file that matches the user input.
-
-Technical Acceptance Criteria: 40%
-Satisfies all of the preceding acceptance criteria plus the following:
-
-Uses the Inquirer package Links to an external site..
-
-Uses the Jest package Links to an external site.for a suite of unit tests.
-
-The application must have these classes: Employee, Manager, Engineer, and Intern.
-
-Repository Quality: 13%
-Repository has a unique name.
-
-Repository follows best practices for file structure and naming conventions.
-
-Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-Repository contains multiple descriptive commit messages.
-
-Repository contains a high-quality README with description and a link to a walkthrough video.
-
-How to Submit the Challenge
-You are required to submit the following for review:
-
-A walkthrough video demonstrating the functionality of the application and passing tests.
-
-A sample HTML file generated using your application.
-
-The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-NOTE
-You are allowed to miss up to two Challenge assignments and still earn your certificate. If you complete all Challenge assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Next, and move on to the next Module.
-
-Comments are disabled for graded submissions in BootCamp Spot. If you have questions about your feedback, please notify your instructional staff or the Student Success Manager. If you would like to resubmit your work for an improved grade, you can use the Resubmit Assignment button to upload new links. You may resubmit up to three times for a total of four submissions.
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/jbxamora) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/jorge-zamora-786945250//) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' height='40'>](https://www.instagram.com/jbxamora/) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg' alt='stackoverflow' height='40'>](https://stackoverflow.com/users/20023706/jbxamora)

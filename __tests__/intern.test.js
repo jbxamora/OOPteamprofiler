@@ -1,4 +1,4 @@
-const Intern = require("../staff/Intern")
+const Intern = require("../lib/Intern")
 
 test("Can create Intern, Verify School and Role", () => {
     const testSchool = "UC STAYATHOME";
