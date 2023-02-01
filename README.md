@@ -51,7 +51,10 @@ The HTML file will yours to keep and deploy how you see fit.
 
 ## Video Walkthrough
 
-vid here
+
+https://user-images.githubusercontent.com/113067058/216005485-c83d2bec-c6c2-4d6f-b418-83cbfbedff6d.mov
+
+
 
 ## Code Snippets
 
