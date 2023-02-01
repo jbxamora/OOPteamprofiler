@@ -1,0 +1,30 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.card-header:first-child {
+    border-radius: 10px;
+}
+
+.employee-card {
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 5px grey;
+    margin: 1rem;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.employee-card:hover {
+    box-shadow: 10px 10px 10px grey;
+    cursor: pointer;
+    transform: translateY(-15px);
+}
+
+.jumbotron {
+    border-radius: 0;
+}

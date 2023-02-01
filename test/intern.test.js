@@ -1,4 +1,4 @@
-import Intern from "../staff/Intern";
+const Intern = require("../staff/Intern")
 
 test("Can create Intern, Verify School and Role", () => {
     const testSchool = "UC STAYATHOME";

@@ -1,4 +1,4 @@
-import Manager from "../staff/Manager";
+const Manager = require("../staff/Manager");
 
 test("Can create Office Number, Get it and Check Role", () => {
     const testOfiiceNumber = 3;
